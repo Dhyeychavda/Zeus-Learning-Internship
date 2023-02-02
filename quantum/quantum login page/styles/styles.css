@@ -1,0 +1,154 @@
+img {
+  width: 20px;
+  height: 24px;
+}
+
+html {
+  height: 100%;
+  min-width: 447px;
+  position: relative;
+}
+
+body {
+  background-color: #d5d4d4;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.header {
+  height: 50px;
+  background-image: url("images/header pattern svg.svg");
+}
+.header img {
+  height: auto;
+  width: 150px;
+  text-align: unset;
+}
+
+.container {
+  display: block;
+  background-color: white;
+  width: 48%;
+  max-width: 440px;
+  margin: 100px auto;
+  padding: 20px 30px 10px 30px;
+  border-top: 5px solid #73d4ed;
+}
+
+.heading {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+}
+.heading img {
+  margin-left: 0;
+}
+.heading p {
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.radio {
+  display: flex;
+  margin-top: 20px;
+}
+
+.radio_selection {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+}
+.radio_selection p {
+  margin: auto 20px auto 5px;
+  font-size: 18px;
+}
+
+.list {
+  margin-top: 25px;
+}
+
+.list_label {
+  font-size: 12px;
+  font-weight: lighter;
+  margin-bottom: 0;
+  color: grey;
+}
+
+.list_area {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+.list_area p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.list_area img {
+  height: 20px;
+}
+
+.input input {
+  text-decoration: none;
+  border: none;
+  margin-top: 25px;
+  width: 100%;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.forgot {
+  font-size: 11px;
+  color: rgb(5, 129, 44);
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+  margin: 0;
+}
+
+.remember {
+  display: flex;
+  justify-content: flex-start;
+}
+.remember p {
+  margin: auto 5px auto 0;
+}
+
+button {
+  width: 130px;
+  height: 30px;
+  display: block;
+  margin: 10px auto;
+  background-color: rgb(96, 210, 96);
+  border: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 1px black;
+  border-radius: 3px;
+  box-shadow: 0 0 5px black;
+  font-family: "Quicksand", sans-serif;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  text-indent: 10px;
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  color: rgb(12, 84, 12);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer img {
+  height: 50px;
+  width: 100px;
+}/*# sourceMappingURL=styles.css.map */
