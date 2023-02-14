@@ -166,7 +166,10 @@ footer .upper_footer {
   font-weight: medium;
   font-size: 14px;
 }
-
+.forgot_option a{
+  text-decoration: none;
+  color: inherit;
+}
 .text_input {
   margin-bottom: 36px;
 }
@@ -193,4 +196,5 @@ footer .upper_footer {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2392156863);
   opacity: 1;
   margin: 34px 136px 24px 136px;
+  cursor: pointer;
 }/*# sourceMappingURL=login.css.map */

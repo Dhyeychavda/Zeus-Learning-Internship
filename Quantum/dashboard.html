@@ -15,7 +15,11 @@
     <div class="container">
       <header>
         <div id="header" class="header">
-          <img class="logo_header" src="./Assets/logo used in header.svg" />
+          <img
+            class="logo_header"
+            src="./Assets/logo used in header.svg"
+            alt="Logo of Quantum"
+          />
         </div>
         <div class="navbaar">
           <a href="#" class="selected desktop_only">DASHBOARD </a>
@@ -23,46 +27,278 @@
           <a href="#" class="desktop_only">USERS </a>
           <a href="#" class="desktop_only">REPORTS </a>
           <a href="#" class="desktop_only"> ADMIN </a>
-          <a href="#"><img src="./Assets/alerts.svg" /></a>
-          <a href="#"><img src="./Assets/announcements.svg" /> </a>
-          <a href="#"><img src="./Assets/account_circle.svg" /> </a>
+          <a href="#"
+            ><img id="alert" src="./Assets/alerts.svg" alt="alerts image"
+          /></a>
+
+          <a href="#"
+            ><img
+              id="announcement"
+              src="./Assets/announcements.svg"
+              alt="announcement image"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="./Assets/account_circle.svg"
+              alt="account profile image"
+            />
+          </a>
           <!-- <a href="#" class="hamburger"
           ><button onclick="myFunction()">
             <img src="./Assets/hamburger-menu.svg" /></button
-        ></a> -->
+          ></a> -->
           <div id="hamburger" class="hamburger">
-            <div class="line line1"></div>
+            <!-- <div class="line line1"></div>
             <div class="line line2"></div>
-            <div class="line line3"></div>
+            <div class="line line3"></div> -->
+            <img src="Assets/hamburger-menu.svg" alt="hamburger menu icon" />
           </div>
 
           <div id="hamburger-menu" class="hamburger-menu">
             <div class="nav-items">
               <li>DASHBOARD</li>
               <li>
-                CONTENT
+                <div class="liwrap">
+                  CONTENT
+                  <img
+                    class="expand"
+                    src="Assets/arrow-down.svg"
+                    alt="arrow-down"
+                  />
+                </div>
                 <ul class="sub-menu">
                   COURSE CATALOG
                 </ul>
               </li>
               <li>
-                USERS
+                <div class="liwrap">
+                  USERS
+                  <img
+                    class="expand"
+                    src="Assets/arrow-down.svg"
+                    alt="arrow-down"
+                  />
+                </div>
                 <ul id="u1" class="sub-menu">
                   USER 1
                 </ul>
               </li>
               <li>
-                REPORTS
+                <div class="liwrap">
+                  REPORTS
+                  <img
+                    class="expand"
+                    src="Assets/arrow-down.svg"
+                    alt="arrow-down"
+                  />
+                </div>
                 <ul class="sub-menu">
                   REPORT 1
                 </ul>
               </li>
               <li>
-                ADMIN
+                <div class="liwrap">
+                  ADMIN
+                  <img
+                    class="expand"
+                    src="Assets/arrow-down.svg"
+                    alt="arrow-down"
+                  />
+                </div>
                 <ul class="sub-menu">
                   ADMIN 1
                 </ul>
               </li>
+            </div>
+          </div>
+          <div id="alert_wrapper" class="alert_wrapper">
+            <div id="alert_list" class="alert_list">
+              <!-- <li class="alert_list_item">
+                <div class="msg">
+                  <p>
+                    Lorem ipsum dolor sit amet cons ect etur adipisicing elit.
+                    Vo lupt ates, vel.
+                  </p>
+                  <img src="Assets/checkbox-checked.svg" alt="" />
+                </div>
+                <div class="class_course_alert">
+                  <span class="class_or_course faded">Course: </span
+                  ><span class="class_course_name">advanced maths</span>
+                </div>
+                <span class="date-time faded">15-sep-2018 at 7:21pm</span>
+               </li> -->
+            </div>
+            <div class="btn">SHOW ALL</div>
+          </div>
+
+          <div id="announcement_wrapper" class="announcement_wrapper">
+            <div id="announcement_list" class="announcement-list">
+              <!-- <li class="announcement_list_item">
+                <div class="pa_header">
+                  <p>
+                    <span class="pa_title">PA:</span
+                    ><span class="pa_name">Wilson Kumar</span>
+                  </p>
+                  <img src="Assets/checkbox-checked.svg" alt="" />
+                </div>
+                <p class="pa_msg">
+                  Lorem ipsum dolor sit amet cons ect etur adipisicing elit. Vo
+                  lupt ates, vel.
+                </p>
+                <div class="class_course_announcement">
+                  <span class="class_or_course">Course: </span
+                  ><span class="class_course_name">advanced maths</span>
+                </div>
+                <div class="pa_footer">
+                  <div class="attachedfile">
+                    <img src="Assets/file_attach.png" alt="" /><span
+                      >2 Files Attached</span
+                    >
+                  </div>
+                  <span class="announcement_date_time"
+                    >15-sep-2018 at 7:21pm</span
+                  >
+                </div>
+              </li>
+              <li class="announcement_list_item">
+                <div class="pa_header">
+                  <p>
+                    <span class="pa_title">PA:</span
+                    ><span class="pa_name">Wilson Kumar</span>
+                  </p>
+                  <img src="Assets/checkbox-checked.svg" alt="" />
+                </div>
+                <p class="pa_msg">
+                  Lorem ipsum dolor sit amet cons ect etur adipisicing elit. Vo
+                  lupt ates, vel.
+                </p>
+                <div class="class_course_announcement">
+                  <span class="class_or_course">Course: </span
+                  ><span class="class_course_name">advanced maths</span>
+                </div>
+                <div class="pa_footer">
+                  <div class="attachedfile">
+                    <img src="Assets/file_attach.png" alt="" /><span
+                      >2 Files Attached</span
+                    >
+                  </div>
+                  <span class="announcement_date_time"
+                    >15-sep-2018 at 7:21pm</span
+                  >
+                </div>
+              </li>
+              <li class="announcement_list_item">
+                <div class="pa_header">
+                  <p>
+                    <span class="pa_title">PA:</span
+                    ><span class="pa_name">Wilson Kumar</span>
+                  </p>
+                  <img src="Assets/checkbox-checked.svg" alt="" />
+                </div>
+                <p class="pa_msg">
+                  Lorem ipsum dolor sit amet cons ect etur adipisicing elit. Vo
+                  lupt ates, vel.
+                </p>
+                <div class="class_course_announcement">
+                  <span class="class_or_course">Course: </span
+                  ><span class="class_course_name">advanced maths</span>
+                </div>
+                <div class="pa_footer">
+                  <div class="attachedfile">
+                    <img src="Assets/file_attach.png" alt="" /><span
+                      >2 Files Attached</span
+                    >
+                  </div>
+                  <span class="announcement_date_time"
+                    >15-sep-2018 at 7:21pm</span
+                  >
+                </div>
+              </li>
+              <li class="announcement_list_item">
+                <div class="pa_header">
+                  <p>
+                    <span class="pa_title">PA:</span
+                    ><span class="pa_name">Wilson Kumar</span>
+                  </p>
+                  <img src="Assets/checkbox-checked.svg" alt="" />
+                </div>
+                <p class="pa_msg">
+                  Lorem ipsum dolor sit amet cons ect etur adipisicing elit. Vo
+                  lupt ates, vel.
+                </p>
+                <div class="class_course_announcement">
+                  <span class="class_or_course">Course: </span
+                  ><span class="class_course_name">advanced maths</span>
+                </div>
+                <div class="pa_footer">
+                  <div class="attachedfile">
+                    <img src="Assets/file_attach.png" alt="" /><span
+                      >2 Files Attached</span
+                    >
+                  </div>
+                  <span class="announcement_date_time"
+                    >15-sep-2018 at 7:21pm</span
+                  >
+                </div>
+              </li>
+              <li class="announcement_list_item">
+                <div class="pa_header">
+                  <p>
+                    <span class="pa_title">PA:</span
+                    ><span class="pa_name">Wilson Kumar</span>
+                  </p>
+                  <img src="Assets/checkbox-checked.svg" alt="" />
+                </div>
+                <p class="pa_msg">
+                  Lorem ipsum dolor sit amet cons ect etur adipisicing elit. Vo
+                  lupt ates, vel.
+                </p>
+                <div class="class_course_announcement">
+                  <span class="class_or_course">Course: </span
+                  ><span class="class_course_name">advanced maths</span>
+                </div>
+                <div class="pa_footer">
+                  <div class="attachedfile">
+                    <img src="Assets/file_attach.png" alt="" /><span
+                      >2 Files Attached</span
+                    >
+                  </div>
+                  <span class="announcement_date_time"
+                    >15-sep-2018 at 7:21pm</span
+                  >
+                </div>
+              </li>
+              <li class="announcement_list_item">
+                <div class="pa_header">
+                  <p>
+                    <span class="pa_title">PA:</span
+                    ><span class="pa_name">Wilson Kumar</span>
+                  </p>
+                  <img src="Assets/checkbox-checked.svg" alt="" />
+                </div>
+                <p class="pa_msg">
+                  Lorem ipsum dolor sit amet cons ect etur adipisicing elit. Vo
+                  lupt ates, vel.
+                </p>
+                <div class="class_course_announcement">
+                  <span class="class_or_course">Course: </span
+                  ><span class="class_course_name">advanced maths</span>
+                </div>
+                <div class="pa_footer">
+                  <div class="attachedfile">
+                    <img src="Assets/file_attach.png" alt="" /><span
+                      >2 Files Attached</span
+                    >
+                  </div>
+                  <span class="announcement_date_time"
+                    >15-sep-2018 at 7:21pm</span
+                  >
+                </div>
+              </li> -->
+            </div>
+            <div class="announcement_btn">
+              <span>SHOW ALL</span>&nbsp;|&nbsp;<span>CREATE NEW</span>
             </div>
           </div>
         </div>
@@ -72,18 +308,24 @@
     <main>
       <div class="toggle_category">
         <div class="courses">
-          <img src="./Assets/courses.svg" /><span id="total_course_category"
+          <img src="./Assets/courses.svg" alt="course category image" /><span
+            id="total_course_category"
             >4 Courses</span
           >
         </div>
-        <div class="classes"><img src="./Assets/classes.svg" />Classes</div>
+        <div class="classes">
+          <img src="./Assets/classes.svg" alt="class category image" />Classes
+        </div>
       </div>
       <div class="info_filter">
         <p id="total_courses">Showing 4 of 4 courses</p>
         <p>
           Sort By:
-          <span> Course Name <img src="./Assets/arrow-down.svg" /> </span>
-          <img src="./Assets/sort.svg" />
+          <span>
+            Course Name
+            <img src="./Assets/arrow-down.svg" alt="sorting direction" />
+          </span>
+          <img src="./Assets/sort.svg" alt="sort image" />
         </p>
       </div>
       <hr />
@@ -217,7 +459,10 @@
         <a> Contact Us</a>
       </div>
       <div class="lower_footer">
-        <img src="/Assets/logo used in footer.svg" />
+        <img
+          src="/Assets/logo used in footer.svg"
+          alt="footer logo of Quantum"
+        />
         <div class="text-muted">&nbsp;|&nbsp;</div>
         <small>
           Copyright © 2020-2021 <b>Zeus Systems Pvt. Ltd.</b> All rights

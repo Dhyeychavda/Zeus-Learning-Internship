@@ -137,6 +137,9 @@ select{
     color: #1F7A54;
     font-weight: medium;
     font-size: 14px;
+    a{
+        text-decoration: none;
+    }
 }
 .text_input{
     margin-bottom: 36px;
