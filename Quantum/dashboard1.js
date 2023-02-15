@@ -7,9 +7,9 @@ fetch('./alert.json')
 fetch('./announcement.json')
     .then(function (response) { return response.json(); })
     .then(function (json) { return process_announcement(json); });
-function process(jsonDataArray) {
-    var data_string = JSON.stringify(jsonDataArray);
-    var objects = JSON.parse(data_string);
+function process(objects) {
+    // const data_string = JSON.stringify(jsonDataArray);
+    // const objects = JSON.parse(data_string);
     var favourite = "./Assets/favourite.svg";
     var total_course_category = document.getElementById("total_course_category");
     total_course_category.innerHTML = "" + objects.length + " courses";
@@ -124,19 +124,19 @@ function process(jsonDataArray) {
         card_footer.appendChild(reports);
     }
 }
-function process_alert(jsonAlertArray) {
-    var alert_string = JSON.stringify(jsonAlertArray);
-    var alert_objects = JSON.parse(alert_string);
+function process_alert(alert_objects) {
+    // const alert_string = JSON.stringify(jsonAlertArray);
+    // const alert_objects = JSON.parse(alert_string);
     var alert_list = document.getElementById("alert_list");
     var alert_img = "Assets/alerts.svg";
     for (var _i = 0, alert_objects_1 = alert_objects; _i < alert_objects_1.length; _i++) {
         var alert_1 = alert_objects_1[_i];
-        var li = document.createElement("li");
-        li.classList.add("alert_list_item");
-        alert_list.appendChild(li);
+        var li_1 = document.createElement("li");
+        li_1.classList.add("alert_list_item");
+        alert_list.appendChild(li_1);
         var msgdiv = document.createElement("div");
         msgdiv.classList.add("msg");
-        li.appendChild(msgdiv);
+        li_1.appendChild(msgdiv);
         var p = document.createElement("p");
         p.innerHTML = alert_1.msg;
         msgdiv.appendChild(p);
@@ -144,7 +144,7 @@ function process_alert(jsonAlertArray) {
         if (alert_1.isNewAlert) {
             img.src = alert_img;
             img.alt = "alert icon";
-            li.style.backgroundColor = "#FFFFEE";
+            li_1.style.backgroundColor = "#FFFFEE";
         }
         else {
             img.src = "Assets/checkbox-checked.svg";
@@ -153,7 +153,7 @@ function process_alert(jsonAlertArray) {
         if (alert_1.course != "") {
             var courseclassdiv = document.createElement("div");
             courseclassdiv.classList.add("class_course_alert");
-            li.appendChild(courseclassdiv);
+            li_1.appendChild(courseclassdiv);
             var course_title = document.createElement("span");
             course_title.classList.add("class_or_course");
             course_title.classList.add("faded");
@@ -168,21 +168,21 @@ function process_alert(jsonAlertArray) {
         date_time.classList.add("date-time");
         date_time.classList.add("faded");
         date_time.innerHTML = alert_1.date_time;
-        li.appendChild(date_time);
+        li_1.appendChild(date_time);
     }
 }
-function process_announcement(jsonAnnouncementArray) {
-    var announcement_string = JSON.stringify(jsonAnnouncementArray);
-    var announcement_objects = JSON.parse(announcement_string);
+function process_announcement(announcement_objects) {
+    // const announcement_string = JSON.stringify(jsonAnnouncementArray);
+    // const announcement_objects = JSON.parse(announcement_string);
     var announcement_list = document.getElementById("announcement_list");
     for (var _i = 0, announcement_objects_1 = announcement_objects; _i < announcement_objects_1.length; _i++) {
         var announcement_1 = announcement_objects_1[_i];
-        var li = document.createElement("li");
-        li.classList.add("announcement_list_item");
-        announcement_list.appendChild(li);
+        var li_2 = document.createElement("li");
+        li_2.classList.add("announcement_list_item");
+        announcement_list.appendChild(li_2);
         var pa_header = document.createElement("div");
         pa_header.classList.add("pa_header");
-        li.appendChild(pa_header);
+        li_2.appendChild(pa_header);
         var header_p = document.createElement("p");
         pa_header.appendChild(header_p);
         var pa_title = document.createElement("span");
@@ -200,10 +200,10 @@ function process_announcement(jsonAnnouncementArray) {
         var pa_msg = document.createElement("p");
         pa_msg.classList.add("pa_msg");
         pa_msg.innerHTML = announcement_1.msg;
-        li.appendChild(pa_msg);
+        li_2.appendChild(pa_msg);
         var coursename = document.createElement("div");
         coursename.classList.add("class_course_announcement");
-        li.appendChild(coursename);
+        li_2.appendChild(coursename);
         var course = document.createElement("span");
         course.classList.add("class_or_course");
         course.innerHTML = "Course: ";
@@ -214,7 +214,7 @@ function process_announcement(jsonAnnouncementArray) {
         coursename.appendChild(course_title);
         var pa_footer = document.createElement("div");
         pa_footer.classList.add("pa_footer");
-        li.appendChild(pa_footer);
+        li_2.appendChild(pa_footer);
         var attachedfile = document.createElement("div");
         attachedfile.classList.add("attachedfile");
         pa_footer.appendChild(attachedfile);
@@ -259,6 +259,37 @@ function removehammenu() {
         }
     }, 300);
 }
+var li = document.querySelectorAll(".nav-items li");
+function is_touch_enabled() {
+    // Check if touch is enabled
+    return "ontouchstart"
+        in window;
+}
+li.forEach(function (li1) {
+    li1.addEventListener("mouseover", function () {
+        li1.classList.add("li");
+    });
+});
+// else{
+//   li.forEach((li1: any) => {
+//     li1.addEventListener("click",()=>{
+//       li1.classList.toggle("li");
+//     });
+//   });
+// }
+var ham_li_hover = document.querySelectorAll(".nav-items li");
+li.forEach(function (li) {
+    li.addEventListener("click", function () {
+        if (document.querySelector("li:hover") != null) {
+            console.log("clicked");
+            // if(!is_touch_enabled()){}
+            li.classList.toggle("li");
+            // else{
+            //   li.classList.toggle("li");
+            // }
+        }
+    });
+});
 hamburger_menu.addEventListener("mouseleave", removehammenu);
 hamburger.addEventListener("mouseleave", removehammenu);
 var alert1 = document.getElementById("alert");

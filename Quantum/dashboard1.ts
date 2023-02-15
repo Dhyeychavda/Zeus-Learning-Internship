@@ -11,11 +11,11 @@ fetch('./announcement.json')
 .then((json) =>process_announcement(json));
 
 
-function process(jsonDataArray: any)
+function process(objects: any)
 {
 
-  const data_string = JSON.stringify(jsonDataArray);
-  const objects = JSON.parse(data_string);
+  // const data_string = JSON.stringify(jsonDataArray);
+  // const objects = JSON.parse(data_string);
 
   let favourite = "./Assets/favourite.svg";
 
@@ -164,10 +164,10 @@ function process(jsonDataArray: any)
   }
 }
 
-function process_alert(jsonAlertArray: any)
+function process_alert(alert_objects: any)
 {
-  const alert_string = JSON.stringify(jsonAlertArray);
-  const alert_objects = JSON.parse(alert_string);
+  // const alert_string = JSON.stringify(jsonAlertArray);
+  // const alert_objects = JSON.parse(alert_string);
   var alert_list = document.getElementById("alert_list") as HTMLDivElement;
   const alert_img  ="Assets/alerts.svg"
   for(const alert of alert_objects){
@@ -220,10 +220,10 @@ function process_alert(jsonAlertArray: any)
   }
 }
 
-function process_announcement(jsonAnnouncementArray: any)
+function process_announcement(announcement_objects: any)
 {
-  const announcement_string = JSON.stringify(jsonAnnouncementArray);
-  const announcement_objects = JSON.parse(announcement_string);
+  // const announcement_string = JSON.stringify(jsonAnnouncementArray);
+  // const announcement_objects = JSON.parse(announcement_string);
   var announcement_list = document.getElementById("announcement_list") as HTMLDivElement;
   for(const announcement of announcement_objects){
     const li=document.createElement("li");
@@ -331,6 +331,48 @@ function removehammenu()
     }
   }, 300);
 }
+
+const li = document.querySelectorAll(".nav-items li") as any;
+
+function is_touch_enabled() {
+          
+  // Check if touch is enabled
+  return "ontouchstart"
+      in window;
+}
+
+li.forEach((li1: any) => {
+  
+  li1.addEventListener("mouseover",()=>{
+    li1.classList.add("li");
+  });
+  
+});
+
+// else{
+//   li.forEach((li1: any) => {
+  
+//     li1.addEventListener("click",()=>{
+//       li1.classList.toggle("li");
+//     });
+//   });
+// }
+
+const ham_li_hover = document.querySelectorAll(".nav-items li");
+li.forEach((li: any) => {
+  
+ li.addEventListener("click",()=>{ 
+  if(document.querySelector("li:hover")!=null){
+    console.log("clicked");
+    // if(!is_touch_enabled()){}
+    li.classList.toggle("li");
+    // else{
+    //   li.classList.toggle("li");
+    // }
+ 
+   
+  }});
+});
 
 hamburger_menu.addEventListener("mouseleave",removehammenu);   
 hamburger.addEventListener("mouseleave",removehammenu);

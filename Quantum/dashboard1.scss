@@ -113,17 +113,19 @@ header {
 	transition-property: transform;
 }
 .nav-items {
-	li {
-		&:hover {
-			.expand {
-				transform: rotateX(180deg);
-			}
-			background-color: $bg_color_6;
-			.sub-menu {
-				display: block;
-				clip: rect(auto, auto, 10rem, auto);
+	.li {
+			&:hover {
+				.expand {
+					transform: rotateX(180deg);
+				}
+				background-color: $bg_color_6;
+				.sub-menu {
+					display: block;
+					clip: rect(auto, auto, 10rem, auto);
+				}
 			}
 		}
+	li{
 		padding-left: 16px;
 		padding-top: 15px;
 		width: -webkit-fill-available;

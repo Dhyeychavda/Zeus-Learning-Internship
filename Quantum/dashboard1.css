@@ -110,20 +110,20 @@ header {
   width: 100%;
   padding: 0;
 }
+.nav-items .li:hover {
+  background-color: #F3F3F3;
+}
+.nav-items .li:hover .expand {
+  transform: rotateX(180deg);
+}
+.nav-items .li:hover .sub-menu {
+  display: block;
+  clip: rect(auto, auto, 10rem, auto);
+}
 .nav-items li {
   padding-left: 16px;
   padding-top: 15px;
   width: -webkit-fill-available;
-}
-.nav-items li:hover {
-  background-color: #F3F3F3;
-}
-.nav-items li:hover .expand {
-  transform: rotateX(180deg);
-}
-.nav-items li:hover .sub-menu {
-  display: block;
-  clip: rect(auto, auto, 10rem, auto);
 }
 
 .liwrap {
