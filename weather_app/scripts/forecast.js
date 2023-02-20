@@ -26,22 +26,3 @@ class Forecast{
 
   }
 }
-
-
-// const key = 'ACIeRvcPS5dTxbGgAu1bA6TtzgxXimjN';
-
-
-// // get weather information
-// const getWeather = async (id) => {
-  
-//   const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
-  
-// };
-
-// // get city information
-// const getCity = async (city) => {
-
-//   const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
-  
-
-// };
