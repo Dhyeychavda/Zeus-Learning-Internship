@@ -1,0 +1,137 @@
+hr {
+	color: #000000;
+	opacity: 0.12;
+	margin-left: 24px;
+	margin-right: 24px;
+}
+.card {
+  background-color: #FFFFFF;
+  padding: 24px 0px 9px 0;
+}
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(476px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 24px;
+    padding: 0px 24px;
+  }
+  .card_grid .card_upper {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 0px 24px;
+  }
+  .card_grid .card_footer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  
+  
+  .card_upper_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 42px;
+    margin-left: 16px;
+  }
+  
+  .text-muted {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #666666;
+  }
+  
+  .dropdown {
+    display: flex;
+    justify-content: space-between;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: medium;
+    border: none;
+    border-bottom: 1px solid #000000;
+  }
+  .dropdown > p {
+    margin: 0;
+  }
+  
+  .card_heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card_heading > h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: medium;
+  }
+  
+  .lower_footer {
+    background-color: #E0E1E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #616161;
+  }
+  
+  .upper_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #1F7A54;
+    font-weight: 600;
+  }
+  
+  footer {
+    margin-top: 32px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .faded {
+    opacity: 0.4;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card_grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 24px;
+      margin-bottom: 24px;
+      padding: 0;
+    }
+    .card_grid .card_upper {
+      grid-template-columns: 27.5% 70%;
+    }
+    .card {
+      margin-left: 99px;
+      margin-right: 98px;
+    }
+    .desktop_only {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .navbaar {
+      grid-template-columns: repeat(4, 0.2fr);
+    }
+    footer {
+      padding-top: 32px;
+    }
+    .open {
+      background-color: #FFFFFF;
+    }
+    .alert_wrapper {
+      left: 265px;
+    }
+    .announcement_wrapper {
+      left: 325px;
+    }
+}

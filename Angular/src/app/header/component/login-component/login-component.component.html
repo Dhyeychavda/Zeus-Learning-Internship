@@ -1,0 +1,108 @@
+<header>
+  <div class="header">
+    <img
+      class="logo_header"
+      src="./assets/logo used in header.svg"
+      alt="header logo of Quantum"
+    />
+  </div>
+</header>
+<main>
+  <div class="card">
+    <div class="container">
+      <div class="card_header">
+        <button name="back button">
+          <img src="./assets/back.svg" alt="back" />
+        </button>
+        <p class="card_heading">Log in with Quantum</p>
+      </div>
+      <form>
+        <div class="card_body">
+          <div class="radio_group">
+            <div class="radio_element">
+              <input
+                type="radio"
+                id="District option"
+                value="District"
+                name="radio"
+                checked
+              />
+              <label for="District option">&nbsp;District</label>
+            </div>
+            <div class="radio_element">
+              <input
+                type="radio"
+                id="Independent School"
+                value="Independent School"
+                name="radio"
+                checked
+              />
+              <label for="Independent School">&nbsp;Independent School</label>
+            </div>
+          </div>
+          <div class="drop-down">
+            <label for="State" class="text-muted">State*</label>
+            <select id="State" name="State" required>
+              <option value="1">Alabama</option>
+              <option value="2">2</option>
+            </select>
+            <label for="District" class="text-muted">District*</label>
+            <select id="District" name="District" required>
+              <option value="1">Alabama School District</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <div class="Text_input">
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Username/Email ID*"
+              required
+            /><br />
+            <span class="forgot_option"><a href="#">FORGOT USERNAME?</a></span>
+          </div>
+          <div class="Text_input">
+            <input
+              type="password"
+              id="fpass"
+              name="fpass"
+              placeholder="Password*"
+              required
+            /><br />
+            <span class="forgot_option"><a href="#">FORGOT PASSWORD?</a></span>
+          </div>
+          <div class="Remember_ME">
+            <input
+              type="checkbox"
+              id="Remember_ME"
+              name="Remember_ME"
+              value="Remember_ME"
+            />
+            <label for="Remember_ME">Remember Me</label><br />
+          </div>
+
+          <a style="text-decoration: none" routerLink="../dashboard"
+            ><button class="cta">LOG IN</button></a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="upper_footer">
+    <a href="#">About </a>
+    <span>&nbsp;|&nbsp;</span>
+    <a href="#"> Contact Us</a>
+  </div>
+  <div class="lower_footer">
+    <img src="/assets/logo used in footer.svg" alt="footer logo of Quantum" />
+    <div class="text-muted">&nbsp;|&nbsp;</div>
+    <small>
+      Copyright © 2020-2021 <b>Zeus Systems Pvt. Ltd.</b> All rights
+      reserved.</small
+    >
+  </div>
+</footer>

@@ -1,1 +1,143 @@
-<p>dashboard-component works!</p>
+<!-- <p>dashboard-component works!</p> -->
+<div class="card_grid" id="card_grid">
+  <!-- <script type="text/javascript" src="dashboard1.js"></script> -->
+
+  <!-- <div class="card" *ngFor="let course of people">
+    <div class="card_upper">
+      <img src="../../../../assets/{{ course.image }}" />
+      <div class="card_upper_right">
+        <div class="card_heading">
+          <h3>{{ course.Title }}</h3>
+          <img width="20px" src="../../../../assets/favourite.svg" />
+        </div>
+        <small class="text-muted"
+          >{{ course.Subject }} &nbsp; | &nbsp; Grade {{ course.Grade }}</small
+        >
+        <small class="text-muted"
+          ><b>{{ course.Units }}</b> Units &nbsp;<b>{{ course.Lessons }}</b>
+          Lessons&nbsp; <b>{{ course.Topics }}</b> Topics</small
+        >
+
+        <select name="classes" id="classes">
+          <option *ngFor="let name of course.Teacher" value="{{ name }}">
+            {{ name }}
+          </option>
+        </select>
+
+        <small class="text-muted"
+          >{{ course.Students }} Students &nbsp; | &nbsp;{{ course.Start }} -
+          {{ course.End }}</small
+        >
+      </div>
+    </div>
+    <hr />
+    <div class="card_footer">
+      <img
+        [ngClass]="course.preview ? '' : 'faded'"
+        src="../../../../assets/preview.svg"
+      />
+      <img
+        [ngClass]="course.manage_course ? '' : 'faded'"
+        src="../../../../assets/manage course.svg"
+      />
+      <img
+        [ngClass]="course.grade_submission ? '' : 'faded'"
+        src="../../../../assets/grade submissions.svg"
+      />
+      <img
+        [ngClass]="course.reports ? '' : 'faded'"
+        src="../../../../assets/reports.svg"
+      />
+    </div>
+  </div> -->
+
+  <div
+    *ngFor="let course of people"
+    class="card"
+    [attr.style]="course.is_expired ? 'padding: 0 0 9px 0' : null"
+  >
+    <span
+      *ngIf="course.is_expired"
+      style="
+        display: block;
+        width: fit-content;
+        max-height: 18px;
+        background-color: #ffe4e6;
+        font-weight: normal;
+        color: #d80000;
+        font-size: 10px;
+        padding: 4px 7px 2px 5px;
+        margin-bottom: 6px;
+        text-align: left;
+      "
+    >
+      EXPIRED
+    </span>
+    <div class="card_upper">
+      <img src="../../../../assets/{{ course.image }}" alt="undefined" />
+      <div class="card_upper_right">
+        <div class="card_heading">
+          <h3>{{ course.Title }}</h3>
+          <img
+            src="../../../../assets/favourite.svg"
+            alt="favourite icon"
+            width="20px"
+            class="favourite"
+          />
+        </div>
+        <small class="text-muted"
+          >{{ course.Subject }} &nbsp; | &nbsp; Grade {{ course.Grade }}</small
+        >
+        <small class="text-muted"
+          ><b>{{ course.Units }}</b> Units &nbsp;<b>{{ course.Lessons }}</b>
+          Lessons&nbsp; <b>{{ course.Topics }}</b> Topics</small
+        >
+        <select
+          [attr.disabled]="course.Teacher.length ? null : true"
+          id="classes"
+          name="classes"
+          class="dropdown"
+        >
+          <div
+            *ngIf="course.Teacher.length; then options; else other_content"
+          ></div>
+          <ng-template #options
+            ><option *ngFor="let name of course.Teacher" value="{{ name }}">
+              {{ name }}
+            </option></ng-template
+          >
+          <ng-template #other_content
+            ><option value="No classes">No classes</option></ng-template
+          >
+        </select>
+        <small class="text-muted"
+          >{{ course.Students }} Students &nbsp; | &nbsp;{{ course.Start }} -
+          {{ course.End }}</small
+        >
+      </div>
+    </div>
+    <hr />
+    <div class="card_footer">
+      <img
+        [ngClass]="course.preview ? '' : 'faded'"
+        src="../../../../assets/preview.svg"
+        alt="Preview SVG"
+      />
+      <img
+        [ngClass]="course.manage_course ? '' : 'faded'"
+        src="../../../../assets/manage course.svg"
+        alt="manage course SVG"
+      />
+      <img
+        [ngClass]="course.grade_submission ? '' : 'faded'"
+        src="../../../../assets/grade submissions.svg"
+        alt="grade submissions SVG"
+      />
+      <img
+        [ngClass]="course.reports ? '' : 'faded'"
+        src="../../../../assets/reports.svg"
+        alt="reports SVG"
+      />
+    </div>
+  </div>
+</div>
