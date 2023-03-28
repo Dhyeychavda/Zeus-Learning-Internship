@@ -1,1 +1,2 @@
-this document is for testing
+this document is for testing.
+ok 
